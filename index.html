@@ -1,0 +1,99 @@
+<html>
+    <style>
+        table{
+            border:10px solid red;
+            text-align: center;
+
+        }
+        body{
+            justify-content: center;
+            margin-left: 450px;
+            margin-top: 50px;
+            background-color:burlywood;
+        
+        }
+        div{
+            background-color: blue;
+    width:400px;
+    height:20px;
+    text-align: center;
+
+        }
+        input{
+            width:370px;
+            height:40px;
+            background-color:aqua;
+            }
+        button{
+            width:60px;
+            height:50px;
+            padding:10px;
+            background-color: blueviolet;
+        }
+    </style>
+    <body>
+        <div>
+        CALCULATOR USING JAVASCRIPT
+    </div><br/>
+            <table>
+            <tr><td colspan="4"><input id="iniyan"></input></td>
+                </tr>
+                <tr>
+                    <td><button onclick="apply(1)">1</button></td>
+                    <td><button onclick="apply(2)">2</button></td>
+                    <td><button onclick="apply(3)">3</button></td>
+                    <td><button onclick="apply(4)">4</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="apply(5)">5</button></td>
+            <td><button onclick="apply(6)">6</button></td>
+            <td><button onclick="apply(7)">7</button></td>
+            <td><button onclick="apply(8)">8</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="apply(9)">9</button></td>
+                <td><button onclick="apply(0)">0</button></td>
+                <td><button onclick="apply('=')">=</button></td>
+                <td><button onclick="apply('AC')">AC</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="apply('+')">+</button></td>
+                <td><button onclick="apply('-')">-</button></td>
+                <td><button onclick="apply('*')">*</button></td>
+                <td><button onclick="apply('/')">/</button></td>
+                </tr> 
+</table>
+<script>
+    function apply(choice)
+    {
+        var w=document.getElementById("iniyan");
+        switch(choice)
+        {
+            case 1: w.value+=1; break;
+             case 2: w.value+=2; break;
+            case 3: w.value+=3; break;
+            case 4: w.value+=4; break;
+            case 5: w.value+=5; break;
+            case 6: w.value+=6; break;
+            case 7: w.value+=7; break;
+            case 8: w.value+=8; break;
+            case 9: w.value+=9; break;
+            case 0:  w.value+=0; break;
+            case 'AC': w.value=""; break;
+            case '+': w.value+='+'; break;
+            case '-': w.value+='-'; break;
+            case '*': w.value+='*'; break;
+            case '/': w.value+='/'; break;
+            case "=":
+                result=eval(w.value);
+                w.value=result;
+                break;
+                default:
+                    none;
+
+
+        }
+    }
+</script>
+</body>
+</html>
